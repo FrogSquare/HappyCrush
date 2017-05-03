@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=1]
+
+[ext_resource path="res://scripts/parentNode2D.gd" type="Script" id=1]
+[ext_resource path="res://textures/Background@2x.png" type="Texture" id=2]
+[ext_resource path="res://scripts/GameScene.gd" type="Script" id=3]
+[ext_resource path="res://scripts/GameLayer.gd" type="Script" id=4]
+
+[node name="ParentNode2D" type="Node"]
+
+script/script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+background = ExtResource( 2 )
+
+[node name="Background" type="TextureFrame" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -20.0
+margin/top = -56.0
+margin/right = 620.0
+margin/bottom = 1080.0
+texture = ExtResource( 2 )
+stretch_mode = 0
+
+[node name="GameScene" type="Node2D" parent="."]
+
+editor/display_folded = true
+script/script = ExtResource( 3 )
+jsonFile = "res://Level/Level_3.json"
+
+[node name="GameLayer" type="Node2D" parent="GameScene"]
+
+transform/pos = Vector2( 300, 512 )
+script/script = ExtResource( 4 )
+
+[node name="TilesLayer" type="Node2D" parent="GameScene/GameLayer"]
+
+[node name="CookiesLayer" type="Node2D" parent="GameScene/GameLayer"]
+
+
