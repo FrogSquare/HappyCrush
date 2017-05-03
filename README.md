@@ -1,6 +1,6 @@
 # HappyCrush
-Our first game in godotengine HappyCrush, (from which we created - Links &amp; Dots)
+Our first game in godotengine HappyCrush, (from which we created - Links &amp; Dots) https://ravonesoft.itch.io/dots-n-dots
 
-And its been months so here we go, our port of https://www.raywenderlich.com/66877/how-to-make-a-game-like-candy-crush-part-1 and my first try in godotengine (Jan 2017).
+And its been months so here we go, our first prototype based on https://www.raywenderlich.com/66877/how-to-make-a-game-like-candy-crush-part-1 and my first try in godotengine
 
 Credits: Artwork by Vicki Wenderlich, 
