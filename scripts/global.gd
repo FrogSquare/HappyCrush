@@ -1,6 +1,6 @@
 extends Node
 
-var NumColumns = 9
+var NumColumns = 8
 var NumRows = 9
 var NumCookieTypes = 6
 

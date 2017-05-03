@@ -361,7 +361,6 @@ func animateFallingCookies(columns):
 			var delay = (0.05 + idx/10.0) * 0.1
 			var duration = ((newPosition.y - cookie.sprite.get_pos().y) / global.TILE_HEIGHT) * 0.1
 			
-			
 			tween.interpolate_property(cookie.sprite, property, cookie.sprite.get_pos(), \
 			newPosition, duration, Tween.TRANS_LINEAR, Tween.EASE_OUT, delay)
 			tween.interpolate_property(cookie.sprite, property, newPosition, newPosition1, \
@@ -429,7 +428,7 @@ func animateScoreForChain(chain):
 	node.set_z(300)
 	
 	var scoreLabel = Label.new()
-	scoreLabel.set("custom_fonts/font", preload("res://Fonts/foo_shadow_22.fnt"))
+	scoreLabel.set("custom_fonts/font", preload("res://Fonts/foo_shadow_34.fnt"))
 	scoreLabel.set("custom_colors/font_color", Color8(225, 80.68, 80.68))
 	scoreLabel.set_text(str(chain.score))
 	
@@ -461,8 +460,8 @@ func animateBeginEndGame(end = false):
 		pos = get_pos()
 	else: set_pos(pos)
 	
-	tween.interpolate_method(self, "set_pos", pos, cPos, 0.8, Tween.TRANS_ELASTIC, \
-	(Tween.EASE_OUT if not end else Tween.EASE_IN), 0.3)
+	tween.interpolate_method(self, "set_pos", pos, cPos, 1.0, Tween.TRANS_BACK, \
+	(Tween.EASE_OUT if not end else Tween.EASE_IN))
 	tween.interpolate_callback(self, tween.get_runtime(), "removeNode", tween)
 	tween.start()
 

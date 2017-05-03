@@ -13,4 +13,9 @@ func get_center():
 	return Vector2(vSize.width/2, vSize.height/2)
 
 func _ready():
+	get_node("GameScene/Shuffle").connect("pressed", self, "_shuffle");
+	pass
+
+func _shuffle():
+	get_node("GameScene").shuffle();
 	pass
