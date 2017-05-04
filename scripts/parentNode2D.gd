@@ -12,6 +12,10 @@ func get_center():
 	var vSize = get_VisibleSize()
 	return Vector2(vSize.width/2, vSize.height/2)
 
+func _enter_tree():
+	OS.set_window_maximized(true);
+	pass
+
 func _ready():
 	get_node("GameScene/Shuffle").connect("pressed", self, "_shuffle");
 	pass
