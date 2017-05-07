@@ -31,3 +31,4 @@ func shuffle():
 	
 	var newCookies = levelG.shuffle()
 	get_node("GameLayer").addSpritesFor(newCookies)
+	get_node("GameLayer").setUserInteraction(true);

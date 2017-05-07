@@ -214,7 +214,9 @@ func trySwap (horzDelta, vertDelta):
 	swapHandler(swap);
 
 func animateInvalidSwap(swap):
-	if swap.cookieA.sprite == null || swap.cookieB.sprite == null: return
+	if swap.cookieA.sprite == null || swap.cookieB.sprite == null:
+		setUserInteraction(true);
+		return
 	
 	swap.cookieA.sprite.set_z(100)
 	swap.cookieB.sprite.set_z(90)
@@ -516,7 +518,7 @@ func touchBegin(event):
 
 func convertPoint(point, from = true):
 	if (point.x >= 0 && point.x < global.NumColumns * global.TILE_WIDTH && \
-	point.y >= 0 && point.y < global.NumColumns * global.TILE_HEIGHT ):
+	point.y >= 0 && point.y < global.NumRows * global.TILE_HEIGHT ):
 		if from:
 			touchInColumn1 = point.x / global.TILE_WIDTH
 			touchInRow1 = point.y / global.TILE_HEIGHT

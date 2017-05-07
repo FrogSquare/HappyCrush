@@ -9,9 +9,7 @@
 [node name="ParentNode2D" type="Node"]
 
 script/script = ExtResource( 1 )
-__meta__ = {
-"_edit_lock_": true
-}
+__meta__ = { "_edit_lock_":true }
 background = ExtResource( 2 )
 
 [node name="Background" type="TextureFrame" parent="."]
