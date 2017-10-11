@@ -13,7 +13,7 @@ func get_center():
 	return Vector2(vSize.width/2, vSize.height/2)
 
 func _enter_tree():
-	OS.set_window_maximized(true);
+	#OS.set_window_maximized(true);
 	pass
 
 func _ready():
