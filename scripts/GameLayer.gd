@@ -481,22 +481,22 @@ var touchStartPos
 var touchCurrentPos
 
 func _input(event):
-	if event.type == InputEvent.MOUSE_BUTTON and event.button_index == BUTTON_LEFT and event.pressed:
+	if event.type == InputEvent.MOUSE_BUTTON and event.button_index == BUTTON_LEFT and event.is_pressed():
 		touchStared = true
 		touchBegin(event)
-	if event.type == InputEvent.MOUSE_BUTTON and event.button_index == BUTTON_LEFT and not event.pressed:
+	if event.type == InputEvent.MOUSE_BUTTON and event.button_index == BUTTON_LEFT and not event.is_pressed():
 		touchStared = false
 		touchEnded(event)
 	if event.type == InputEvent.MOUSE_MOTION:
 		if touchStared: touchMoved(event)
 	
-	if event.type == InputEvent.SCREEN_TOUCH and event.pressed:
+	if event.type == InputEvent.SCREEN_TOUCH and event.is_pressed():
 		touchStared = true
 		touchBegin(event)
-	if event.type == InputEvent.SCREEN_TOUCH and not event.pressed:
+	if event.type == InputEvent.SCREEN_TOUCH and not event.is_pressed():
 		touchStared = false
 		touchEnded(event)
-	if event.type == InputEvent.SCREEN_DRAG and event.pressed:
+	if event.type == InputEvent.SCREEN_DRAG and event.is_pressed():
 		if touchStared: touchMoved(event)
 
 var touchInColumn1
